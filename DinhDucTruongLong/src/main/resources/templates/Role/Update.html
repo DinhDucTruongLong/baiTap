@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Role</title>
+</head>
+<body>
+<h1>Update Role</h1>
+<form th:action="@{/roles/update}" th:object="${Role}" method="post">
+    <input type="hidden" th:field="*{role_id}" />
+    <div>
+        <label>Role Name:</label>
+        <input type="text" th:field="*{role_name}" />
+    </div>
+    <button type="submit">Save</button>
+</form>
+<a href="/roles">Back to List</a>
+</body>
+</html>
